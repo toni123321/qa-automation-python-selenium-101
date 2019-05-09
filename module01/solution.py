@@ -7,7 +7,7 @@ def f_c(x):
 	return 4
 
 def f_x(x, a, b):
-	result = a*x + b
+	result = a * x + b
 	return result
 
 def sum(x):
