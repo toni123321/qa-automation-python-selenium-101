@@ -1,5 +1,3 @@
-import os
-
 def f_c(x):
 	'''
 	return value 4 for any input parameter
