@@ -27,7 +27,6 @@ class TestBill(unittest.TestCase):
         with self.assertRaises(ValueError):
             Bill(-5)
 
-
 class TestBatchBill(unittest.TestCase):
     def setUp(self):
         self.bill5 = Bill(5)
@@ -74,5 +73,7 @@ We have the following count of bills, sorted in ascending order:
 
         self.assertEqual(self.desk.inspect(), expected)
 
+
 if __name__ == '__main__':
     unittest.main()
+    
