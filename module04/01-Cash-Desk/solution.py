@@ -48,3 +48,23 @@ class BatchBill:
 		
 		return amount
 
+#class CashDeck
+class CashDesk:
+	def __init__(self):
+		self.desk = []
+
+	def take_money(self, money):
+		try:
+			for m in money:
+				self.desk.append(m)		
+		except:
+			self.desk.append(money)
+
+	def total(self):
+		amount = 0
+		for d in self.desk:
+			amount += int(d)
+
+		return amount
+		
+	
