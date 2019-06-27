@@ -26,8 +26,25 @@ class Bill:
 				
 #class BatchBill
 class BatchBill:
+	def __init__(self, bills_list):
+		self.bills_list = bills_list
 	
+	def __repr__(self):
+		return self.bills_list
+		
+	
+	def __getitem__(self, index):
+		return self.bills_list[index]
 
-#class CashDeck
-class CashDeck:
-	pass
+	def __len__(self):
+		return len(self.bills_list)
+	
+	def total(self):
+		amount = 0
+		length = self.__len__()
+		
+		for i in range(0, length):
+			amount+= int(self.bills_list[i])
+		
+		return amount
+
