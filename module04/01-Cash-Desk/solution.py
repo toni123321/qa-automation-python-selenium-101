@@ -68,3 +68,22 @@ class CashDesk:
 		return amount
 		
 	
+	def inspect(self):
+		output = "We have a total of %d$ in the desk\n" % (self.total())
+		output += "We have the following count of bills, sorted in ascending order:"
+		#output += "%d$ bills - %d\n"
+		
+		dict_desk = {}
+		for d in self.desk:
+			dict_desk[int(d)] = 0
+		
+		for d in self.desk:
+			if int(d) in dict_desk:
+				dict_desk[int(d)]+=1;
+		
+		bill_values = sorted(dict_desk.keys())
+		
+		for bill_value in bill_values:
+			output += "\n%d$ bills - %d" % (bill_value, dict_desk[bill_value])
+			
+		return output
