@@ -3,52 +3,50 @@ import math
 from re import findall
 
 def sum_of_digits(n):
-	num = abs(n)
-	res = 0
-	while num:
-		res += num % 10
-		num //= 10
-	return res
+    num = abs(n)
+    res = 0
+    while num:
+        res += num % 10
+        num //= 10
+    return res
 
 def to_digits(n):
-	num = abs(n)
-	digits = [int(x) for x in str(n)]
-	return digits
-	
+    num = abs(n)
+    digits = [int(x) for x in str(n)]
+    return digits
+    
 def to_number(digits):
-	res = int("".join(map(str, digits)))
-	return res
-	
+    res = int("".join(map(str, digits)))
+    return res
+    
 def count_vowels(str):
-	str_lower = str.lower()
-	vowels = 'aeiouyAEIOUY'
-	return sum(str_lower.count(v) for v in vowels)
-	
+    str_lower = str.lower()
+    vowels = 'aeiouyAEIOUY'
+    return sum(str_lower.count(v) for v in vowels)
+    
 def count_consonants(str):
-	str_lower = str.lower()
-	consonants = 'bcdfghjklmnpqrstvwxz'
-	return sum(str_lower.count(c) for c in consonants)
+    str_lower = str.lower()
+    consonants = 'bcdfghjklmnpqrstvwxz'
+    return sum(str_lower.count(c) for c in consonants)
 
 def prime_number(n):
-	for i in range(2, n):
-		if not (n % i):
-			return False
-	return True		
-	
+    for i in range(2, n):
+        if n % i == 0:
+            return False
+    return True        
+    
 def fact_digits(n):
-	result_sum = 0
-	for number in to_digits(n):
-		result_sum += fact(number)
-		
-	return result_sum
-	
+    result_sum = 0
+    for number in to_digits(n):
+        result_sum += fact(number)
+        
+    return result_sum
+    
 def fact(n):
-	if n==0 or n==1:
-		return 1
-	else:
-		return n * fact(n - 1)
-				
-	
+    if (n == 0) or (n == 1):
+        return 1
+    return n * fact(n - 1)
+                
 def fibonacci(n):
     if n == 1:
         return [1]
@@ -56,7 +54,7 @@ def fibonacci(n):
     for i in range(2, n):
         fib.append(fib[i - 1] + fib[i - 2])
     return fib
-    	
+        
  
 def fib_number(n):
     fib = fibonacci(n)
