@@ -1,5 +1,5 @@
 import unittest
-from solution import Bill, BatchBill, CashDesk
+from solution import Bill, BatchBill,CashDesk
 
 
 class TestBill(unittest.TestCase):
@@ -75,4 +75,4 @@ We have the following count of bills, sorted in ascending order:
         self.assertEqual(self.desk.inspect(), expected)
 
 if __name__ == '__main__':
-    unittest.main()
+	unittest.main()

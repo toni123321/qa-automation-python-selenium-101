@@ -56,7 +56,7 @@ Returns `False` if the panda is not a member of the network.
 http://www.python-course.eu/recursive_functions.php
 
 **NOTE 2:** each recursive function can be rewriten in iterative way. Which one is easier and
-more readable/simple depends on the particular problem domain. 
+more readable/simple depends on the particular problem domain.
 
 **NOTE 3:** during testing we don't need to use recursion. If we do then maybe we're
 doing something wrong!
